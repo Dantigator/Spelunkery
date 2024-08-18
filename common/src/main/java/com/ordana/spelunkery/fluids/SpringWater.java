@@ -37,7 +37,7 @@ public class SpringWater extends ModFlowingFluid {
         return new SpringWaterRenderer(
                 new ResourceLocation("minecraft", "block/water_still"),
                 new ResourceLocation("minecraft", "block/water_flow"),
-                (PlatHelper.isModLoaded("sodium") || PlatHelper.isModLoaded("embeddium")) ? 0xffEED543 : 0xff43D5EE,
+                (PlatHelper.isModLoaded("sodium") && !PlatHelper.isModLoaded("embeddium")) ? 0xffEED543 : 0xff43D5EE,
                 new ResourceLocation("minecraft", "block/water_overlay"),
                 new ResourceLocation("minecraft", "block/water_overlay"),
                 new Vec3(68, 69, 103));
